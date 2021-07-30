@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [ ! -f build/libs/basket-pricer-1.0-all.jar ]; then
+    echo " ! Program not built yet. Run the ci script: ./ci"
+    exit 1
+fi
+
+java -cp build/libs/basket-pricer-1.0-all.jar pricebasket.tech.drivers.CommandLineClient $*
